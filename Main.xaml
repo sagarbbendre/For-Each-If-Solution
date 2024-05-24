@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="594,1575" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1086,1811" sap2010:WorkflowViewState.IdRef="Main_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -62,9 +62,10 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence finds the Minimim and Maximum from an array, using For Each , If and Assign activities" DisplayName="Min Max Sequence" sap:VirtualizedContainerService.HintSize="604,1550" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence finds the Minimim and Maximum from an array, using For Each , If and Assign activities" DisplayName="Min Max Sequence" sap:VirtualizedContainerService.HintSize="644,1746" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:Int32[]" Name="InitArray" />
       <Variable x:TypeArguments="x:Int32" Name="MinValue" />
@@ -76,7 +77,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap2010:Annotation.AnnotationText="Assigns initial values to the array." DisplayName="Set init array" sap:VirtualizedContainerService.HintSize="562,91" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap2010:Annotation.AnnotationText="Assigns initial values to the array." DisplayName="Set init array" sap:VirtualizedContainerService.HintSize="582,113" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:Int32[]">[InitArray]</OutArgument>
       </Assign.To>
@@ -89,7 +90,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap2010:Annotation.AnnotationText="Assigns the first element of InitArray to MinValue." DisplayName="Assign min value" sap:VirtualizedContainerService.HintSize="562,102" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap2010:Annotation.AnnotationText="Assigns the first element of InitArray to MinValue." DisplayName="Assign min value" sap:VirtualizedContainerService.HintSize="582,113" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[MinValue]</OutArgument>
       </Assign.To>
@@ -102,7 +103,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <Assign sap2010:Annotation.AnnotationText="Assigns the first element of InitArray to MaxValue." DisplayName="Assign max value" sap:VirtualizedContainerService.HintSize="562,102" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap2010:Annotation.AnnotationText="Assigns the first element of InitArray to MaxValue." DisplayName="Assign max value" sap:VirtualizedContainerService.HintSize="582,113" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[MaxValue]</OutArgument>
       </Assign.To>
@@ -115,21 +116,21 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each Item in the Array" sap:VirtualizedContainerService.HintSize="562,750" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[InitArray]">
+    <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each Item in the Array" sap:VirtualizedContainerService.HintSize="582,881" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[InitArray]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:Int32">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Int32" Name="Element" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,626" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="546,755" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[Element &lt; MinValue]" DisplayName="If current element is smaller than min" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[Element &lt; MinValue]" DisplayName="If current element is smaller than min" sap:VirtualizedContainerService.HintSize="484,271" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Assign DisplayName="Assign Min" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign DisplayName="Assign Min" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[MinValue]</OutArgument>
                   </Assign.To>
@@ -139,9 +140,9 @@
                 </Assign>
               </If.Then>
             </If>
-            <If Condition="[Element &gt; MaxValue]" DisplayName="If current element is greater than max" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[Element &gt; MaxValue]" DisplayName="If current element is greater than max" sap:VirtualizedContainerService.HintSize="484,271" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Assign DisplayName="Assign Max" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign DisplayName="Assign Max" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[MaxValue]</OutArgument>
                   </Assign.To>
@@ -151,11 +152,12 @@
                 </Assign>
               </If.Then>
             </If>
+            <ui:Break sap:VirtualizedContainerService.HintSize="484,25" sap2010:WorkflowViewState.IdRef="Break_1" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message - Minimum Value" sap:VirtualizedContainerService.HintSize="562,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Minimum from array is: &quot; + MinValue.ToString]" />
-    <ui:LogMessage DisplayName="Log Message - Maximum Value" sap:VirtualizedContainerService.HintSize="562,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Maximum from array is: &quot; + MaxValue.ToString]" />
+    <ui:LogMessage DisplayName="Log Message - Minimum Value" sap:VirtualizedContainerService.HintSize="582,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Minimum from array is: &quot; + MinValue.ToString]" />
+    <ui:LogMessage DisplayName="Log Message - Maximum Value" sap:VirtualizedContainerService.HintSize="582,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Maximum from array is: &quot; + MaxValue.ToString]" />
   </Sequence>
 </Activity>
